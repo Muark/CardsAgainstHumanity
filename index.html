@@ -6,7 +6,7 @@
   <body>
     <div class="container">
       <header>
-        <h1>Cards against humanity</h1>
+        <a href="localhost:3000" style="color: black"><h1>Cards against humanity</h1></a>
 
         {{> loginButtons}}
       </header>      
@@ -42,27 +42,6 @@
             </li>
           {{/each}}
         </ul>
-      </div>
-    </div>
-  </body>
-</template>
-
-<template name="game">
-  <body>
-    <div class="container">
-      <header>
-        <h1>Cards against humanity</h1>
-
-        {{> loginButtons}}
-      </header>
-      <div class="waiting">
-          <span class="waitingtitle">Waiting for players / host to start.. </span> <br> <br>
-          <span class="waiting"><strong>Player 1: {{player_1_name}}</strong></span> <br>
-          <span class="waiting"><strong>Player 2: {{player_2_name}}</strong></span> <br>
-          <span class="waiting"><strong>Player 3: {{player_3_name}}</strong></span> <br>
-          <span class="waiting"><strong>Player 4: {{player_4_name}}</strong></span> <br>
-          <span class="waiting"><strong>Player 5: {{player_5_name}}</strong></span> <br>
-          <span class="waiting"><strong>Player 6: {{player_6_name}}</strong></span>
       </div>
     </div>
   </body>

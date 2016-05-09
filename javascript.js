@@ -24,6 +24,11 @@ if (Meteor.isClient) {
   Meteor.subscribe("chats");
   Meteor.subscribe("games");
 
+  var gimma = Games.find({player_6_id: "39bgFjT5pgMCHbqDr"});
+
+  Session.set('gameId', gimma['player_6_id']);
+  alert(Session.get('gameId'));
+
   Template.home.helpers({
     chats: function () {
       return Chats.find({}, {sort: {createdAt: -1}, limit:20});
@@ -72,7 +77,7 @@ if (Meteor.isClient) {
 
   Template.game.helpers({
     games: function () {
-      return Games.findOne({_id: 'aveQ3FtGZgam5sfeW'}, {sort: {createdAt: 1}});
+      return Games.find({_id: 'Kv5hG333fYiJbvGNw'}, {sort: {createdAt: 1}});
     }
   });
 }
